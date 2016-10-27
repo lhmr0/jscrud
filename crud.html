@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="http://www.lhmr.tech/assets/favicon.ico">
+  <title>Personas CRUD</title>
+  <style>
+      #spoiler{
+      display: none;
+      text-align: center
+      }
+  </style>
+</head>
+<body style="background-color:#9C9696;">
+<img style="display: block;
+    margin: auto;" src="http://lhmr.tech/content/images/2016/10/darth.png" alt="luishmr0" height="187" width="180">
+<form style="text-align: center" class="pure-form" action="javascript:void(0);" method="POST" onsubmit="app.Add()">   
+    <input type="text" class="pure-input-rounded" id="add-name" placeholder="Nuevo nombre">
+    <input type="text" class="pure-input-rounded" id="add-lastname" placeholder="Nuevo Apeliido">
+
+  <button class="pure-button" value="Add">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+    Añadir
+</button>
+</form>
+
+<div id="spoiler">
+  <form class="pure-form" action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" class="pure-input-rounded" id="edit-name">
+    <input type="text" class="pure-input-rounded" id="edit-lastname">
+     <button class="pure-button" value="Edit">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    Editar
+</button> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+
+<p style="text-align: center" id="counter"></p>
+
+
+<table style=" margin: 0 auto;" class="pure-table pure-table-bordered">
+   <tr>
+    <th>Name</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+  </tr>
+    <tbody id="nombre">
+    </tbody>
+</table>
+
+<script type="text/javascript" src="js/hola.js"></script>
+</body>
+</html>
